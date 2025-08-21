@@ -29,15 +29,15 @@ This repository contains AI project ideas, architectures, and future improvement
 ### Credit Risk Prediction
 ```mermaid
 flowchart TD
-	A([Start]) --> B[Data Ingestion]
-	B --> C{Data Quality Check}
-	C -- Pass --> D[Feature Engineering]
-	C -- Fail --> E([End])
-	D --> F[Model Training (XGBoost)]
-	F --> G{Model Evaluation}
-	G -- Good --> H[Dashboard]
-	G -- Poor --> D
-	H --> I([End])
+	Start([Start]) --> DataIngestion[Data Ingestion]
+	DataIngestion --> DataQuality{Data Quality Check}
+	DataQuality -- Pass --> FeatureEng[Feature Engineering]
+	DataQuality -- Fail --> End([End])
+	FeatureEng --> ModelTraining[Model Training - XGBoost]
+	ModelTraining --> ModelEval{Model Evaluation}
+	ModelEval -- Good --> Dashboard[Dashboard]
+	ModelEval -- Poor --> FeatureEng
+	Dashboard --> End
 ```
 
 ### Fraud Detection
